@@ -13,7 +13,7 @@ start proc
 LP:
 	add eax, [edi]  ;Add the content, not the address, to the eax register which was set to zero earlier                           
 	add edi, TYPE intArray ;The type of intArray is DWORD which is 2 bytes or 16 bits. The address in edi is incremented by 16 bits, pointing to the next element in the array
-	loop LP ;loops the program
+	loop LP ; Jumps back tp LP label and decrements the ECX(count) register.
 	ret
 
 start	endp
