@@ -11,7 +11,7 @@ main	proc
 
 LI:
 		cmp WORD PTR[ebx], 0 ;cmp WORD PTR means compare the 16 bit representation of zero with the value stored AT the address in the register EBX
-		jnz found ;if the zero flag is set, jump to found. The flag is set if cmp evals to zero
+		jnz found ;if the zero flag is not set, jump to found. The flag is set if cmp evals to zero
 		add ebx, 2 ;point to the next two bytes/ next value in the array
 		loop LI ;Will loop and decrement the count register until zero or until non-zero value is found.
 		jmp notFound
